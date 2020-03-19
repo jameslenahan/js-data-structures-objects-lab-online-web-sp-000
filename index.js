@@ -1,22 +1,22 @@
 
-var driver = {}
+var recipes = {}
 
-function updateDriverWithKeyAndValue(driver, key, value) {
-  return Object.assign({}, driver, { [key]: value })
+function updateObjectWithKeyAndValue(object, key, value){
+  return Object.assign({}, object, {[key]: value})
 }
 
-function destructivelyUpdateDriverWithKeyAndValue(driver, key, value) {
-  driver[key] = value;
-  return driver;
+function destructivelyUpdateObjectWithKeyAndValue(object, key, value){
+  object[key] = value
+  return object
 }
 
-function deleteFromDriverByKey(driver, key) {
-  var newObj = Object.assign({}, driver);
-  delete newObj.key;
-  return newObj;
+function deleteFromObjectByKey(object, key){
+  const newObj = Object.assign({}, object)
+  delete newObj[key]
+  return newObj
 }
 
-function destructivelyDeleteFromDriverByKey(driver, key) {
-  delete driver.key;
-  return driver;
+function destructivelyDeleteFromObjectByKey(object, key){
+  delete object[key]
+  return object
 }
